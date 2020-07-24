@@ -13,11 +13,24 @@
     }
     .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
       position: relative;
-      opacity: 1.0;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+    .bgimg-1::before, .bgimg-2::before, .bgimg-3::before, .bgimg-4::before {
+      /*
+        Work-around to set opacity of image without affecting text overlay opacity
+        background-color: 1-alpha = apparent opacity of background image
+        background-color: rgb = tachyons dark gray #333333
+       */
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-color: rgba(51,51,51,0.75);
     }
     .bgimg-1 {
       background-image: url("assets/CT_liverlesion.png");
@@ -37,6 +50,7 @@
     }
     .caption {
       position: absolute;
+      opacity: 1.0;
       left: 0;
       top: 50%;
       width: 100%;
@@ -65,7 +79,9 @@
     </div>
     <div style="color: #777;background-color: white; padding: 50px 80px;">
       <h3 style="text-align: center;">Who We Are</h3>
-      <p class="f3 measure center">A board-certified radiologist and a full-stack software developer who share a passion for software design and data management to improve the practice of medicine.</p>
+      <p class="f3 measure center">
+        A board-certified radiologist and a full-stack software developer who share a passion
+        for software design and data management to improve the practice of medicine.</p>
     </div>
     <div class="bgimg-2"></div>
     <div style="color: #777; background-color: white; padding: 50px 80px;">
@@ -80,11 +96,11 @@
     <div class="bgimg-4"></div>
     <div style="position: relative">
       <div class="f3" style="color: #ddd;background-color: #333333; padding: 50px 80px">
-        <h3 class="green f2" style="text-align: center;">PANORAD PATH&reg;</h3>
+        <h3 class="green f2" style="text-align: center;">PATHFINDER</h3>
         <div class="f3 measure center">
-          <p>PATH&reg; is a free-text analysis engine that extracts medical concepts from radiology and pathology reports.</p>
+          <p>PATHFINDER&reg; is a free-text analysis engine that extracts medical concepts from radiology and pathology reports.</p>
           <p>The extracted data help determine relevancy between pairs of rad-path reports, and are used to build dashboards enabling radiologists to assess and improve their diagnostic accuracy.</p>
-          <p>The database of linked rad-path reports and extracted concepts support diverse education and research initiatives.</p>
+          <p>The database of linked rad-path reports and extracted concepts support a range of education and research initiatives.</p>
         </div>
       </div>
     </div>
