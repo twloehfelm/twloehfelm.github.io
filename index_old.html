@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .fixed {
+        z-index: 999;
+      }
+      .link:focus { outline: none; }
+      /*header {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+      }*/
+      .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bgimg-1::before, .bgimg-2::before, .bgimg-3::before, .bgimg-4::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(51,51,51,0.80);
+      }
+      .bgimg-1 {
+        background-image: url("images/CT_liverlesion.png");
+        min-height: 100vh;
+      }
+      /*
+      .bgimg-2 {
+        background-image: url("images/MR_liverlesion.png");
+        min-height: 80%;
+      }
+      .bgimg-3 {
+        background-image: url("images/CT_renalmass.png");
+        min-height: 80%;
+      }
+      .bgimg-4 {
+        background-image: url("images/CT_appendicitis.png");
+        min-height: 80%;
+      }*/
+      .caption {
+        position: absolute;
+        opacity: 0.85;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #1f1f1f;
+      }
+      .caption span.border {
+        /*background-color: #333333;
+        background: radial-gradient( rgb(51,51,51,1.0),rgb(51,51,51,0.8));*/
+        color: #19A974;
+        padding: 18px;
+        font-size: 4.5em;
+        font-weight: 500;
+        /*text-shadow: -1px 1px 0 rgba(51, 51, 51, 0.5),
+                      1px 1px 0 rgb(51, 51, 51, 0.5),
+                      1px -1px 0 rgb(51, 51, 51, 0.5),
+                      -1px -1px 0 rgb(51, 51, 51, 0.5);*/
+        letter-spacing: 6px;
+      }
+      .anchor{
+        display: block;
+        height: 35vh;
+        margin-top: -35vh;
+        visibility: hidden;
+      }
+
+      */
+
+    </style>
+
+
+  </head>
+  <body class="w-100 bg-dark-gray">
+    <main>
+      <div data-name="header" class="fixed ph2 w-100 bg-dark-gray">
+        <nav class="db dt-l w-100 border-box pa3 ph5-l">
+          <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
+            <img src="images/favicon-32x32.png" class="dib w2 h2 br-100" alt="Site Name">
+          </a>
+          <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            <a class="link hover-green white-70 f6 f5-l dib mr3 mr4-l" href="#whoweare" title="Who We Are">About Us</a>
+            <a class="link hover-green white-70 f6 f5-l dib mr3 mr4-l" href="#mission" title="Why We Do It">Mission</a>
+            <a class="link hover-green white-70 f6 f5-l dib mr3 mr4-l" href="#pathfinder" title="Products">Products</a>
+            <a class="link hover-green white-70 f6 f5-l pv2 ph3 dib ba" href="#" title="Contact Us">Contact Us</a>
+          </div>
+        </nav>
+      </div>
+      <section data-name="hero" class="pa3 pa5-ns bt b--black-10 black-70 bg-dark-gray bgimg-1">
+        <div class="caption">
+          <span class="border center">PANORAD</span>
+          <p class="f3 near-white measure-narrow center">Learn from experience<br>Improve your diagnostic skill<br>Be a better radiologist</p>
+        </div>
+      </section>
+      <section id="pathfinder" class="pv4 ph1_5 ph2-m ph0-l bb b--light-gray bg-light-gray">
+        <header class="mw18 center lato tc mb3">
+          <h1 class="ma0 mb1 f2 fw4 lh01 dark-gray">PathFinder</h1>
+          <p class="ma0 f4 fw4 lh1_5 gray measure-narrow center">A free-text analysis engine that extracts medical concepts from Radiology and Pathology reports</p>
+        </header>
+        <div class="mw18 mw42_5-ns center ma0 pa0 cf">
+          <div class="cf mb2-ns">
+            <div class="fl-ns w-50-ns mb2 pr2-ns">
+              <img src="images/favicon-32x32.png" class="db ma0" style="width: 48px; height: 48px;">
+              <h3 class="dib ma0 mb0_5 lato f4 fw4 dark-gray">Secure</h3>
+              <p class="ma0 lato f6 fw4 lh1_5 gray">
+                No PHI ever leaves your network. All text processing is done locally.
+              </p>
+            </div>
+            <div class="fl-ns w-50-ns mb2">
+              <img src="images/favicon-32x32.png" class="db ma0" style="width: 48px; height: 48px;">
+              <h3 class="dib ma0 mb0_5 lato f4 fw4 dark-gray">Accurate</h3>
+              <p class="ma0 lato f6 fw4 lh1_5 gray">
+                Our advanced processing pipeline and concept matching algorithms ensures that only accurate and relevant rad-path matches are saved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+    <!--<div class="bgimg-1">
+      <div class="caption">
+        <span class="border bw0 br3 b--solid b--near-white">PANORAD</span>
+      </div>
+    </div>-->
+    <span class="anchor" id="whoweare"></span>
+    <div style="color: #777;background-color: white; padding: 50px 80px;">
+      <h3 style="text-align: center; text-transform: uppercase;">Who We Are</h3>
+      <p class="f3 measure center">
+        A board-certified radiologist and a full-stack software developer who share a passion
+        for software design and data management to improve the practice of medicine.
+      </p>
+      <p class="f3 measure center">
+        We create software to fill niche needs in healthcare, with a particular focus on data created by or useful to radiologists.
+      </p>
+    </div>
+    <div class="bgimg-3"></div>
+    <span class="anchor" id="mission"></span>
+    <div style="color: #777; background-color: white; padding: 50px 80px;">
+      <h3 style="text-align: center; text-transform:uppercase;">Our Mission</h3>
+      <p class="f3 measure center">To improve the process of diagnosing disease by bringing to light information that is currently buried in the electronic medical record.</p>
+    </div>
+    <div class="bgimg-4"></div>
+    <span class="anchor" id="pathfinder_old"></span>
+    <div style="position: relative;">
+      <div class="f3" style="color: #ddd; background-color: #333333; padding: 50px 80px">
+        <h3 class="green f2" style="text-align: center; font-variant: small-caps;">PathFinder</h3>
+        <div class="f3 measure center">
+          <p><span style="font-variant: small-caps;">PathFinder&reg;</span> is a free-text analysis engine that extracts medical concepts from radiology and pathology reports.</p>
+          <p>The extracted data help determine relevancy between pairs of rad-path reports, and are used to build dashboards enabling radiologists to assess and improve their diagnostic accuracy.</p>
+          <p>The database of linked rad-path reports and extracted concepts support a range of education and research initiatives.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let menuIsOpen = false
+      const menu = document.getElementById('menu')
+      const menuBtn = document.getElementById('menu-btn')
+
+      const closeMenu = () => {
+        menu.className = menu.className.replace('left-50', 'left-100')
+        menuBtn.innerHTML = 'Menu'
+        menuIsOpen = false
+      }
+
+      const openMenu = () => {
+        menu.className = menu.className.replace('left-100', 'left-50')
+        menuBtn.innerHTML = 'Close'
+        menuIsOpen = true
+      }
+
+      window.onload = () => {
+        // bind click handler to menu button
+        menuBtn.onclick = (e) => {
+          e.preventDefault()
+          if (menuIsOpen) closeMenu()
+          else openMenu()
+        }
+      }
+
+      window.onresize = closeMenu
+    </script>
+  </body>
+</html>
