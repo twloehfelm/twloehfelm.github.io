@@ -20,6 +20,36 @@
 </head>
 
 <body class="index-page sidebar-collapse">
+  <div class="modal fade pirads-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <img
+          src="./images/pirads.png"
+          style="border-radius: 5px; width: 120%; object-fit: scale-down;">
+        </img>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade screenshot-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content"></div>
+        <img
+          src="./images/screenshot.png"
+          style="border-radius: 5px; width: 160%; object-fit: scale-down; position:absolute; left: -220px;">
+        </img>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade tirads-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <img
+          src="./images/tirads.png"
+          style="border-radius: 5px; width: 120%; object-fit: scale-down;">
+        </img>
+      </div>
+    </div>
+  </div>
   <nav class="navbar navbar-transparent navbar-color-on-scroll navbar-inverse bg-dark fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
@@ -109,6 +139,7 @@
           <div class="col-md-10 ml-auto mr-auto">
             <img
               src="./images/screenshot.png"
+              data-toggle="modal" data-target=".screenshot-modal-lg"
               style="border-radius: 5px; width: 100%; object-fit: scale-down; box-shadow: 15px 15px 15px gray;">
             </img>
           </div>
@@ -164,12 +195,14 @@
           <div class="col-md-6 ml-auto mr-auto">
             <img
               src="./images/pirads.png"
+              data-toggle="modal" data-target=".pirads-modal-lg"
               style="border-radius: 5px; width: 100%; object-fit: scale-down; box-shadow: 15px 15px 15px gray;">
             </img>
           </div>
           <div class="col-md-6 ml-auto mr-auto">
             <img
               src="./images/tirads.png"
+              data-toggle="modal" data-target=".tirads-modal-lg"
               style="border-radius: 5px; width: 100%; object-fit: scale-down; box-shadow: 15px 15px 15px gray;">
             </img>
           </div>
