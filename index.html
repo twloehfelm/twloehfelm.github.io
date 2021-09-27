@@ -20,47 +20,13 @@
 </head>
 
 <body class="index-page sidebar-collapse">
-  <div class="modal fade pirads-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal fade img-modal-lg" id="previewImage" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <img
-          src="./images/pirads.png"
-          style="
-            border-radius: 5px; 
-            height: 90vh; 
-            width: 90vw; 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            object-fit: scale-down;">
-        </img>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade screenshot-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <img
-          src="./images/screenshot.png"
-          style="
-            border-radius: 5px; 
-            height: 90vh; 
-            width: 90vw; 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            object-fit: scale-down;">
-        </img>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade tirads-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <img
-          src="./images/tirads.png"
+          id="modalImg"
+          src=""
+          data-dismiss="modal"
           style="
             border-radius: 5px; 
             height: 90vh; 
@@ -163,7 +129,7 @@
           <div class="col-md-10 ml-auto mr-auto">
             <img
               src="./images/screenshot.png"
-              data-toggle="modal" data-target=".screenshot-modal-lg"
+              data-toggle="modal" data-target=".img-modal-lg" data-src="./images/screenshot.png"
               style="border-radius: 5px; width: 100%; object-fit: scale-down; box-shadow: 15px 15px 15px gray;">
             </img>
           </div>
@@ -215,18 +181,18 @@
           </div>
         </div>
         <h4 class=""><b>Automatic Quality Metrics</b></h4>
-        <div class="row" style="margin-top: 20px;">
-          <div class="col-md-6 ml-auto mr-auto">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto" style="margin-top: 20px;">
             <img
               src="./images/pirads.png"
-              data-toggle="modal" data-target=".pirads-modal-lg"
+              data-toggle="modal" data-target=".img-modal-lg" data-src="./images/pirads.png"
               style="border-radius: 5px; width: 100%; object-fit: scale-down; box-shadow: 15px 15px 15px gray;">
             </img>
           </div>
-          <div class="col-md-6 ml-auto mr-auto">
+          <div class="col-md-6 ml-auto mr-auto" style="margin-top: 20px;">
             <img
               src="./images/tirads.png"
-              data-toggle="modal" data-target=".tirads-modal-lg"
+              data-toggle="modal" data-target=".img-modal-lg" data-src="./images/tirads.png"
               style="border-radius: 5px; width: 100%; object-fit: scale-down; box-shadow: 15px 15px 15px gray;">
             </img>
           </div>
@@ -267,6 +233,11 @@
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="./assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
   <script>
+    $('#previewImage').on('show.bs.modal', function (event) {
+      var img = $(event.relatedTarget) // Image that triggered the modal
+      var src = img.data('src') // Extract info from data-* attributes
+      document.getElementById("modalImg").src = src;
+    })
     // $(document).ready(function() {
     //   //init DateTimePickers
     //   materialKit.initFormExtendedDatetimepickers();
