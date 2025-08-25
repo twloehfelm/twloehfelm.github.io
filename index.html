@@ -71,31 +71,6 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="material-icons">group_work</i> About Us
-            </a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="material-icons">person_pin_circle</i> Our Mission
-            </a>
-          </li> -->
-          <!-- <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i> Products
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="./pathfinder.html" class="dropdown-item">
-                <i class="material-icons">near_me</i> <span style="font-family: 'Pragati Narrow', sans-serif; font-size: 1.2em; letter-spacing: 1px;"> PATHFINDER</span>
-              </a>
-            </div>
-          </li> -->
-          <!--<li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/panoradio" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>-->
           <li class="nav-item">
             <a class="nav-link" href="mailto: info@panorad.io"><i class="material-icons" target="_blank">mail_outline</i> Contact Us</a>
           </li>
@@ -114,7 +89,9 @@
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
             <h1 class="panorad-green" style="text-shadow: 5px 5px 5px #222222;">Automatic<br> Radiology-Pathology<br> Correlation</h1>
-            <h2 style="text-shadow: 5px 5px 5px #222222; margin-top: 10px;">See what you are missing.</h3>
+            <h2 id="tagline" style="text-shadow: 5px 5px 5px #222222; margin-top: 10px;">
+              See what you are missing.
+            </h2>
           </div>
         </div>
       </div>
@@ -258,6 +235,29 @@
 <script>
   var currentYear = new Date().getFullYear();
   document.getElementById("currentYear").textContent = currentYear;
+
+
+  // List of taglines to rotate through
+  const taglines = [
+    "See what you are missing.",
+    "Earn CME while you work.",
+    "Learn from your own experience.",
+    "No extra steps. Just extra credit.",
+    "Smart work. Smarter CME.",
+    "The future of CME is in your workflow.",
+  ];
+
+  let index = 0;
+  const taglineEl = document.getElementById("tagline");
+
+  function rotateTagline() {
+    const randomTagline = taglines[Math.floor(Math.random() * taglines.length)];
+    taglineEl.textContent = randomTagline;
+  }
+
+  // Change tagline every 5 seconds
+  setInterval(rotateTagline, 5000);
+
 </script>
 </body>
 
