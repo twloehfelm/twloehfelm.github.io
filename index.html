@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    PANORAD
+    panorad
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -17,6 +17,21 @@
   <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <!-- <link href="./assets/demo/demo.css" rel="stylesheet" /> -->
+  <style>
+    @font-face {
+    font-family: "panorad";
+    src: url("./assets/fonts/panorad.woff2") format("woff2"),
+       url("./assets/fonts/panorad.woff") format("woff"),
+       url("./assets/fonts/panorad.ttf") format("truetype");
+}
+
+    .panorad {
+      font-family: "panorad", sans-serif;
+    }
+    .panorad-green {
+      color: #19A974;
+    }
+  </style>
 </head>
 <!-- Start of HubSpot Embed Code -->
 <!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/21257214.js"></script> -->
@@ -45,8 +60,8 @@
   <nav class="navbar navbar-color-on-scroll navbar-inverse bg-dark fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="index.html">
-          <b>PANORAD</b></a>
+        <a class="navbar-brand panorad" href="index.html">
+          <b style="font-size: 3rem;"><span style="color: white">pano</span><span class="panorad-green">rad</span></b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
@@ -98,7 +113,7 @@
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <h1 style="color: #19A974; text-shadow: 5px 5px 5px #222222;">Automatic<br> Radiology-Pathology<br> Correlation</h1>
+            <h1 class="panorad-green" style="text-shadow: 5px 5px 5px #222222;">Automatic<br> Radiology-Pathology<br> Correlation</h1>
             <h2 style="text-shadow: 5px 5px 5px #222222; margin-top: 10px;">See what you are missing.</h3>
           </div>
         </div>
@@ -141,7 +156,7 @@
             <div class="col-md-4">
               <div class="info">
                 <div class="icon icon-info">
-                  <i class="material-icons" style="color: #19A974;">security</i>
+                  <i class="material-icons panorad-green">security</i>
                 </div>
                 <h4 class="" style="font-size: 1.5em;"><b>Secure</b></h4>
                 <p style="text-align: left; color: rgb(80, 80, 80); font-size: 1.1em;">
@@ -154,7 +169,7 @@
             <div class="col-md-4">
               <div class="info">
                 <div class="icon icon-info">
-                  <i class="material-icons" style="color: #19A974;">person</i>
+                  <i class="material-icons panorad-green">person</i>
                 </div>
                 <h4 class="" style="font-size: 1.5em;"><b>Personal</b></h4>
                 <p style="text-align: left; color: rgb(80, 80, 80); font-size: 1.1em;">
@@ -168,7 +183,7 @@
             <div class="col-md-4">
               <div class="info">
                 <div class="icon icon-info">
-                  <i class="material-icons" style="color: #19A974;">gps_fixed</i>
+                  <i class="material-icons panorad-green">gps_fixed</i>
                 </div>
                 <h4 class="" style="font-size: 1.5em;"><b>Accurate</b></h4>
                 <p style="text-align: left; color: rgb(80, 80, 80); font-size: 1.1em;">
@@ -230,7 +245,7 @@
   <!--  End Modal -->
   <footer class="footer" data-background-color="black">
     <div class="container">
-      PANORAD © 2021 - <span id="currentYear"></span>
+      <span class="panorad" style="font-size: 2rem;">panorad</span> © 2021 - <span id="currentYear"></span>
     </div>
   </footer>
 
