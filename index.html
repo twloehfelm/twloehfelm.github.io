@@ -31,6 +31,10 @@
     .panorad-green {
       color: #19A974;
     }
+
+    #tagline {
+      transition: opacity 1s ease-in-out;
+    }
   </style>
 </head>
 <!-- Start of HubSpot Embed Code -->
@@ -247,16 +251,19 @@
     "The future of CME is in your workflow.",
   ];
 
-  let index = 0;
   const taglineEl = document.getElementById("tagline");
 
   function rotateTagline() {
-    const randomTagline = taglines[Math.floor(Math.random() * taglines.length)];
-    taglineEl.textContent = randomTagline;
+    taglineEl.style.opacity = 0;
+    setTimeout(() => {
+      const randomTagline = taglines[Math.floor(Math.random() * taglines.length)];
+      taglineEl.textContent = randomTagline;
+      taglineEl.style.opacity = 1;
+    }, 1000); // wait for fade-out
   }
 
-  // Change tagline every 5 seconds
-  setInterval(rotateTagline, 5000);
+  // Change tagline every 8 seconds
+  setInterval(rotateTagline, 8000);
 
 </script>
 </body>
