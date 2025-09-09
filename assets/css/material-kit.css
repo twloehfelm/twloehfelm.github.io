@@ -18262,14 +18262,14 @@ footer .pull-center {
 }
 
 .index-page .brand h1 {
-  font-size: 4.2rem;
+  font-size: clamp(2.5rem, 4vw, 12rem);
   font-weight: 600;
   display: inline-block;
   position: relative;
 }
 
 .index-page .brand h3 {
-  font-size: 1.313rem;
+  font-size: clamp(1.75rem, 2.5vw, 6rem);
   max-width: 500px;
   margin: 10px auto 0;
 }
